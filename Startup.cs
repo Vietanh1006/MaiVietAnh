@@ -13,54 +13,55 @@ using Microsoft.EntityFrameworkCore;
 namespace RazorPagesMovie
 {
     public class Startup
-{
-    public Startup(IConfiguration configuration, IWebHostEnvironment env)
     {
-        Environment = env;
-        Configuration = configuration;
-    }
-
-    public IConfiguration Configuration { get; }
-    public IWebHostEnvironment Environment { get; }
-
-    public void ConfigureServices(IServiceCollection services)
-    {
-        if (Environment.IsDevelopment())
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
-            services.AddDbContext<RazorPagesMovieContext>(options =>
-            options.UseSqlite(
-                Configuration.GetConnectionString("RazorPagesMovieContext")));
-        }
-        else
-        {
-            services.AddDbContext<RazorPagesMovieContext>(options =>
-            options.UseSqlServer(
-                Configuration.GetConnectionString("MovieContext")));
+            Environment = env;
+            Configuration = configuration;
         }
 
-        services.AddRazorPages();
-    }
+        public IConfiguration Configuration { get; }
+        public IWebHostEnvironment Environment { get; }
 
-    public void Configure(IApplicationBuilder app)
-    {
-        if (Environment.IsDevelopment())
+        public void ConfigureServices(IServiceCollection services)
         {
-            app.UseDeveloperExceptionPage();
+            if (Environment.IsDevelopment())
+            {
+                services.AddDbContext<RazorPagesMovieContext>(options =>
+                options.UseSqlite(
+                    Configuration.GetConnectionString("RazorPagesMovieContext")));
+            }
+            else
+            {
+                services.AddDbContext<RazorPagesMovieContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("MovieContext")));
+            }
+
+            services.AddRazorPages();
         }
-        else
+
+        public void Configure(IApplicationBuilder app)
         {
-            app.UseExceptionHandler("/Error");
-            app.UseHsts();
+            if (Environment.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapRazorPages();
+            });
         }
-
-        app.UseHttpsRedirection();
-        app.UseStaticFiles();
-
-        app.UseRouting();
-
-        app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapRazorPages();
-        });
     }
 }

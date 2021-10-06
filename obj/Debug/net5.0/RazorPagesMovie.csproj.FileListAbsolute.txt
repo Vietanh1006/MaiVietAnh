@@ -165,3 +165,13 @@ D:\netcore\RazorPagesMovie\obj\Debug\net5.0\RazorPagesMovie.dll
 D:\netcore\RazorPagesMovie\obj\Debug\net5.0\ref\RazorPagesMovie.dll
 D:\netcore\RazorPagesMovie\obj\Debug\net5.0\RazorPagesMovie.pdb
 D:\netcore\RazorPagesMovie\obj\Debug\net5.0\RazorPagesMovie.genruntimeconfig.cache
+D:\netcore\RazorPagesMovie\obj\Debug\net5.0\Razor\Pages\Movies\Create.cshtml.g.cs
+D:\netcore\RazorPagesMovie\obj\Debug\net5.0\Razor\Pages\Movies\Delete.cshtml.g.cs
+D:\netcore\RazorPagesMovie\obj\Debug\net5.0\Razor\Pages\Movies\Details.cshtml.g.cs
+D:\netcore\RazorPagesMovie\obj\Debug\net5.0\Razor\Pages\Movies\Edit.cshtml.g.cs
+D:\netcore\RazorPagesMovie\obj\Debug\net5.0\Razor\Pages\Movies\Index.cshtml.g.cs
+D:\netcore\RazorPagesMovie\obj\Debug\net5.0\Razor\Pages\Student\Create.cshtml.g.cs
+D:\netcore\RazorPagesMovie\obj\Debug\net5.0\Razor\Pages\Student\Delete.cshtml.g.cs
+D:\netcore\RazorPagesMovie\obj\Debug\net5.0\Razor\Pages\Student\Details.cshtml.g.cs
+D:\netcore\RazorPagesMovie\obj\Debug\net5.0\Razor\Pages\Student\Edit.cshtml.g.cs
+D:\netcore\RazorPagesMovie\obj\Debug\net5.0\Razor\Pages\Student\Index.cshtml.g.cs
