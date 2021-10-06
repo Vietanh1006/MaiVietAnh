@@ -15,6 +15,32 @@ namespace RazorPagesMovie.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.10");
 
+            modelBuilder.Entity("RazorPagesMovie.Models.Employee", b =>
+                {
+                    b.Property<string>("EmployeeID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("EmployeeName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("EmployeeID");
+
+                    b.ToTable("Employee");
+                });
+
+            modelBuilder.Entity("RazorPagesMovie.Models.Lecture", b =>
+                {
+                    b.Property<string>("LectureID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LectureName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("LectureID");
+
+                    b.ToTable("Lecture");
+                });
+
             modelBuilder.Entity("RazorPagesMovie.Models.Movie", b =>
                 {
                     b.Property<int>("ID")
@@ -36,6 +62,19 @@ namespace RazorPagesMovie.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Movie");
+                });
+
+            modelBuilder.Entity("RazorPagesMovie.Models.Person", b =>
+                {
+                    b.Property<string>("PersonID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PersonName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("PersonID");
+
+                    b.ToTable("Person");
                 });
 
             modelBuilder.Entity("RazorPagesMovie.Models.Student", b =>
