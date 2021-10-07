@@ -7,6 +7,8 @@ namespace RazorPagesMovie.Models
     {
         [Key]
         public int ID { get; set; }
+        [MaxLength(20)]
+        [MinLength(3)]
         public string Title { get; set; }
 
         [DataType(DataType.Date)]
